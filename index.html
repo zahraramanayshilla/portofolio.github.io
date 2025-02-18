@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profil zahra</title>
+    <!-- link boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- link-font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        body {
+            background: radial-gradient(rgb(129, 196, 255) 1%, rgb(131, 255, 253) 50%, rgb(193, 245, 255) 100%);
+            background-blend-mode: multiply;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.5);
+            margin: 30px;
+            border-radius: 50px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            margin-left: 370px;
+            justify-content: center;
+            z-index: 3;
+        }
+
+
+        .nav-color {
+            background-color: #393939;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .berubah {
+            transition: all ease-in 0.3s;
+        }
+
+        .hero img {
+            margin-top: 170px;
+            width: 300px;
+            position: relative;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            width: 20%;
+            border-radius: 100%;
+        }
+
+
+        a.nav-link {
+            color: white;
+            font-size: 16px;
+        }
+
+        a.nav-link:hover {
+            font-weight: 700;
+            color: white;
+
+        }
+
+        .nav-link .active {
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #393939;
+
+        }
+
+        .contact-icon li {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            line-height: 30px;
+            padding: 0;
+            margin-left: auto;
+
+
+        }
+
+        .contact-icon ul li {
+            margin-left: 0;
+        }
+
+        .contact-icon li a {
+            color: black;
+        }
+
+        .contact-icon li i {
+            margin: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="relative w-full h-full overflow-hidden">
+        <!-- Blurred Circle Shapes -->
+        <div class="absolute w-64 h-64 bg-green-200 rounded-full blur-2xl opacity-50 floating" style="top: 10%; left: 5%;"></div>
+        <div class="absolute w-72 h-72 bg-green-300 rounded-full blur-2xl opacity-50 floating" style="top: 50%; left: 70%; animation-delay: 2s;"></div>
+        <div class="absolute w-56 h-56 bg-green-400 rounded-full blur-2xl opacity-50 floating" style="top: 70%; left: 20%; animation-delay: 4s;"></div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg  w-50 position-fixed berubah">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-3 ">
+                        <a class="nav-link " href="#about">About</a>
+                    </li>
+                    <li class="nav-item mx-3 ">
+                        <a class="nav-link " href="#project">Project</a>
+                    </li>
+                    <li class="nav-item mx-3 ">
+                        <a class="nav-link " href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hello im zahra -->
+    <section class="hero">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="col">
+                <img src="./img/webcam-toy-photo35-removebg-preview.png">
+                <h3 class="text-center mb-3 mt-3">Hello I'm </h3>
+                <h3 class="text-center mb-2 ">Zahra Ramanayshilla Sopian</h3>
+                <p class="text-center mb-5 mt-3 ">Welcome to my personal Website 👋 </p>
+                <div class="service mt-5 d-flex justify-content-center align-items-center" id="review">
+
+                    <div class="review-button">
+                        <a href="#contact" type="button" class="btn btn-dark">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- about -->
+    <section class="about pt-5 pb-5" id="about">
+        <h2 class="text-center m-5 p-5">About Me</h2>
+        <div class="container  d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="col-lg">
+                    <img src="./img/webcam-toy-photo39.jpg" style="width: 500px; border-radius: 15px;">
+
+                </div>
+                <div class="col-lg mt-3" style="line-height: 40px;">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora nihil aut laboriosam. Ipsa quod
+                        eveniet, facere repudiandae modi velit. Facere id animi doloribus vero, eum sed dignissimos eos,
+                        officia
+                        debitis, laboriosam fugiat. Omnis rerum tempore impedit adipisci, incidunt voluptatem pariatur
+                        aperiam
+                        placeat error facere ab a fuga quaerat, id commodi quisquam non, eos totam. Quos iste quis
+                        labore
+                        expedita soluta modi, omnis, odit ducimus, explicabo iusto accusamus? Dolorem vitae odit vel
+                        laudantium
+                        nesciunt cumque dolor quod, sequi dolorum eius cupiditate officia consequatur explicabo
+                        accusamus
+                        doloribus et laborum animi beatae unde. A ex sequi reiciendis recusandae ipsum quibusdam commodi
+                        ipsam
+                        vel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- project -->
+    <section class="project pt-5 pb-5 " id="project">
+        <h2 class="text-center m-5 p-5">Project</h2>
+        <div class="container  d-flex justify-content-center align-items-center">
+            <div class="row">
+                <div class="col-3">
+                    <div class="card" style="width: 19rem;">
+                        <img src="./img/image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Sans-Co</h5>
+                            <p class="card-text">Project study yang dibuat saat Praktik Kerja Lapangan (PKL) dengan Tema
+                                Coffe Shop.</p>
+                            <a href="https://sans-co.glitch.me/" class="btn btn-dark">Sans-Co Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card" style="width: 19rem;">
+                        <img src="./img/Screenshot 2024-10-29 160311.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Login</h5>
+                            <p class="card-text"> Proyek Sekolah Membuat Login dan Logut untuk admin</p>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card" style="width: 19rem;">
+                        <img src="./img/Screenshot 2024-10-29 161032.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">UKK-Gallery</h5>
+                            <p class="card-text">Study project yang dibuat saat Ujian akhir semester membuat tampilan
+                                gallery.</p>
+                            <a href="https://github.com/zahraramanayshilla/UKK2024_ZAHRA_R_webgallery.git"
+                                class="btn btn-dark">Gallery</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card" style="width: 19rem;">
+                        <img src="./img/Screenshot 2024-10-25 123740.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">UI Portofolio</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- contact -->
+    <section class="contact pt-5 pb-5 " id="contact">
+        <div class="container">
+            <h3>🤝 Let’s get in touch</h3>
+            <br>
+            <h1>Have any project ideas?</h1>
+            <h1>Ask something?</h1>
+            <br>
+            <div class=" contact-icon">
+                <ul>
+                    <li>
+                        <i class='bx bx-envelope fs-3'></i>
+                        <p>zahraramanyshilla@gmail.com</p>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/zra____________/"><i class='bx bxl-instagram fs-3'></i></a>
+                        <p>@zra____________</p>
+                    </li>
+                    <li>
+                        <i class='bx bx-phone-call fs-3'></i>
+                        <p>+62 812-8895-1726</p>
+                    </li>
+                    <li>
+                        <a href="https://github.com/zahraramanayshilla"> <i class='bx bxl-github fs-3'></i></a>
+                        <p>zahraramanayshilla</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="text-white pt-4 pb-3 ">
+        <div class="container text-center text-md-start">
+
+            <div class="row text-md-center">
+                <div class="col-md-12">
+                    <p>Copyrights ⓒ 2024 Zahra Ramanayshilla Sopian</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // navbar
+        const navbar = document.getElementsByTagName('nav')[0];
+        window.addEventListener('scroll', function () {
+            console.log(window.scrollY);
+            if (window.scrollY > 1) {
+                navbar.classList.replace('berubah', 'nav-color');
+            } else if (this.window.scrollY <= 0) {
+                navbar.classList.replace('nav-color', 'berubah')
+            }
+        });
+
+    </script>
+</body>
+
+</html>
