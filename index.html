@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <!-- animate -->
+   <!-- AOS CSS CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
         body {
             /* background: radial-gradient(rgb(129, 196, 255) 1%, rgb(131, 255, 253) 50%, rgb(193, 245, 255) 100%); */
@@ -172,13 +175,16 @@
         .card-project:hover {
             transform: translateY(-25px);
         }
-        .about{
+
+        .about {
             transition: transform 0.3s ease;
         }
+
         .about:hover {
-            transform:  translateY(-25px);
+            transform: translateY(-25px);
         }
     </style>
+    <div class="pat "></div>
 
 </head>
 
@@ -212,6 +218,7 @@
         </div>
     </nav>
 
+
     <!-- hello im zahra -->
     <section class="hero">
         <div class="container d-flex justify-content-center align-items-center">
@@ -230,7 +237,8 @@
         </div>
     </section>
 
-    <div class="container d-flex justify-content-center align-items-center vh-100 about " id="about">
+    <div class="container d-flex justify-content-center align-items-center vh-100 about " id="about"
+        data-aos="fade-up" data-aos-duration="1500">
         <div class="card p-5">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
@@ -281,14 +289,13 @@
         </div>
     </div>
 
-
     <!-- Skills Section -->
-    <section class="skills py-5" id="skills">
+    <section class="skills py-5 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" id="skills">
         <div class="container">
             <h2 class="text-center mb-5">My Skills</h2>
             <div class="row g-4">
                 <!-- Skill Card 1 -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 " data-aos="flip-left" data-aos-duration="1000">
                     <div class="card skill-card h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-code fa-3x mb-3 text-dark"></i>
@@ -299,7 +306,7 @@
                     </div>
                 </div>
                 <!-- Skill Card 2 -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4"data-aos="flip-left" data-aos-duration="1000">
                     <div class="card skill-card h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-palette fa-3x mb-3 text-dark"></i>
@@ -310,7 +317,7 @@
                     </div>
                 </div>
                 <!-- Skill Card 3 -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="flip-left" data-aos-duration="1000">
                     <div class="card skill-card h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-database fa-3x mb-3 text-dark"></i>
@@ -329,7 +336,7 @@
         <h2 class="text-center m-5 p-5">Project</h2>
         <div class="container">
             <div class="row g-4 justify-content-center">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="flip-down" data-aos-duration="1000">
                     <div class="card card-project">
                         <img src="./img/image.png" class="card-img-top" alt="Sans-Co Project">
                         <div class="card-body">
@@ -339,7 +346,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="flip-down" data-aos-duration="1000">
                     <div class="card card-project">
                         <img src="./img/Logo.jpeg" class="card-img-top" alt="Nasi Uduk 88 Brebes">
                         <div class="card-body">
@@ -350,7 +357,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="flip-down" data-aos-duration="1000">
                     <div class="card card-project">
                         <img src="./img/Screenshot 2024-10-29 161032.png" class="card-img-top" alt="UKK-Gallery">
                         <div class="card-body">
@@ -361,7 +368,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="flip-down" data-aos-duration="1000">
                     <div class="card card-project">
                         <img src="./img/Logo.png" class="card-img-top" alt="Calon Dosen">
                         <div class="card-body">
@@ -381,7 +388,7 @@
         <h2 class="text-center m-5 p-5">UI/UX</h2>
         <div class="container">
             <div class="row g-4 justify-content-center">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="flip-down" data-aos-duration="1000">
                     <div class="card card-project">
                         <img src="./img/wanda.png" class="card-img-top" alt="Sans-Co Project">
                         <div class="card-body">
@@ -392,7 +399,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="flip-down" data-aos-duration="1000">
                     <div class="card card-project">
                         <img src="./img/merdeka.png" class="card-img-top" alt="Nasi Uduk 88 Brebes">
                         <div class="card-body">
@@ -407,7 +414,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- contact -->
     <section class="contact pt-5 pb-5 " id="contact">
@@ -467,6 +473,15 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- AOS JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Inisialisasi AOS
+        AOS.init({
+            once: true, // Animasi hanya terjadi sekali
+            offset: 120, // Jarak trigger animasi dari bagian atas layar (dalam piksel)
+            delay: 200, // Delay animasi (dalam milidetik)
+        });
+    </script>
 
 </html>
