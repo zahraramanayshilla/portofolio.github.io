@@ -16,7 +16,7 @@
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <style>
         body {
             /* background: radial-gradient(rgb(129, 196, 255) 1%, rgb(131, 255, 253) 50%, rgb(193, 245, 255) 100%); */
@@ -37,6 +37,7 @@
             background-color: #393939;
             transition: all ease-in-out 0.3s;
         }
+
         .berubah {
             transition: all ease-in 0.3s;
         }
@@ -65,18 +66,6 @@
             transition: all ease-in 0.3s;
         }
 
-        .hero img {
-            margin-top: 170px;
-            width: 300px;
-            position: relative;
-            display: flex;
-            justify-self: center;
-            align-items: center;
-            width: 20%;
-            border-radius: 100%;
-        }
-
-
         a.nav-link {
             color: white;
             font-size: 16px;
@@ -92,6 +81,17 @@
             font-weight: 600;
         }
 
+        .hero img {
+            margin-top: 170px;
+            width: 300px;
+            position: relative;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            width: 20%;
+            border-radius: 100%;
+        }
+
         footer {
             background-color: #393939;
 
@@ -105,8 +105,6 @@
             line-height: 30px;
             padding: 0;
             margin-left: auto;
-
-
         }
 
         .contact-icon ul li {
@@ -119,6 +117,66 @@
 
         .contact-icon li i {
             margin: 0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background-color: #ffffff;
+            line-height: 35px;
+        }
+
+        .profile-img {
+            border-radius: 10px;
+        }
+
+        .social-icons a {
+            color: #6c757d;
+            margin: 0 5px;
+            font-size: 20px;
+        }
+
+        .card-img-top {
+            aspect-ratio: 1 / 1;
+            /* Membuat gambar berbentuk persegi */
+            object-fit: cover;
+            /* Memastikan gambar menutupi area tanpa distorsi */
+        }
+
+        .card-project {
+            height: 100%;
+            /* Memastikan semua card memiliki tinggi yang sama */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            /* Memastikan card body mengisi sisa ruang */
+        }
+
+        .skill-card {
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-25px);
+        }
+
+        .card-project {
+            transition: transform 0.3s ease;
+        }
+
+        .card-project:hover {
+            transform: translateY(-25px);
+        }
+        .about{
+            transition: transform 0.3s ease;
+        }
+        .about:hover {
+            transform: rotate(-90);
         }
     </style>
 
@@ -141,6 +199,9 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item mx-3">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item mx-3">
                         <a class="nav-link" href="#project">Project</a>
                     </li>
                     <li class="nav-item mx-3">
@@ -156,8 +217,8 @@
         <div class="container d-flex justify-content-center align-items-center">
             <div class="col">
                 <img src="./img/webcam-toy-photo35-removebg-preview.png">
-                <h3 class="text-center mb-3 mt-3">Hello I'm </h3>
-                <h3 class="text-center mb-2 ">Zahra Ramanayshilla Sopian</h3>
+                <h2 class="text-center mb-3 mt-3">Hello I'm </h2>
+                <h2 class="text-center mb-2 ">Zahra Ramanayshilla Sopian</h2>
                 <p class="text-center mb-5 mt-3 ">Welcome to my personal Website 👋 </p>
                 <div class="service mt-5 d-flex justify-content-center align-items-center" id="review">
 
@@ -166,82 +227,188 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
     </section>
-    <!-- about -->
-    <section class="about pt-5 pb-5" id="about">
-        <h2 class="text-center m-5 p-5">About Me</h2>
-        <div class="container">
+
+    <div class="container d-flex justify-content-center align-items-center vh-100 about " id="about">
+        <div class="card p-5">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 text-center">
-                    <img src="./img/webcam-toy-photo35.jpg" class="img-fluid rounded" alt="About Me"
-                        style="max-width: 80%; height: auto;">
+                <div class="col-md-4 text-center">
+                    <img alt="Profile picture of a professional user experience designer" class="img-fluid profile-img"
+                        height="150" src="./img/webcam-toy-photo35.jpg" width="150" />
+                    <div class="social-icons mt-3">
+                        <a href="#">
+                            <i class="fab fa-facebook-f">
+                            </i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter">
+                            </i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in">
+                            </i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram">
+                            </i>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-12 mt-3" style="line-height: 30px;">
-                    <p>Lulusan SMK jurusan Teknik komputer dan Informatika. Memiliki kemampuan dalam bekerja secara
-                        berkelompok dan mampu beradaptasi dalam lingkungan baru dan saya memiliki semangat tinggi untuk
-                        berkembang dan berkarir dalam bidang komputer atau pemrograman. Sedang menempuh kuliah di
-                        Universitas Logistik dan Bisnis Internasional jurusan Teknik Informatika dengan NPM 714240003.
+                <div class="col-md-8">
+                    <h2>
+                        I Am a Junior Student Learning Web Development
+                    </h2>
+                    <p>
+                        I am currently learning how to design and develop websites, from layout to functionality.
+                        My focus is on building simple websites, web services, and online stores as part of my learning
+                        journey.
                     </p>
+                    <p>
+                        I am passionate about understanding user experience and creating visually appealing, responsive
+                        web designs.
+                    </p>
+                    <div class="mt-3">
+                        <a class="btn btn-dark me-2" href="#project">
+                            My Projects
+                        </a>
+                        <a class="btn btn-outline-secondary" href="#">
+                            Download CV
+                        </a>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Skills Section -->
+    <section class="skills py-5" id="skills">
+        <div class="container">
+            <h2 class="text-center mb-5">My Skills</h2>
+            <div class="row g-4">
+                <!-- Skill Card 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card skill-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-code fa-3x mb-3 text-dark"></i>
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Proficient in HTML, CSS, JavaScript, Php, and frameworks like Bootstrap
+                                and Tailwind.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card skill-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-palette fa-3x mb-3 text-dark"></i>
+                            <h5 class="card-title">UI/UX Design</h5>
+                            <p class="card-text">Experienced in designing user-friendly interfaces using Figma and
+                                Canva.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card skill-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-database fa-3x mb-3 text-dark"></i>
+                            <h5 class="card-title">Database Management</h5>
+                            <p class="card-text">Skilled in managing databases using MySQL and MongoDB.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-
-
     <!-- project -->
-    <section class="project pt-5 pb-5" id="project">
+    <section class="project pb-5" id="project">
         <h2 class="text-center m-5 p-5">Project</h2>
         <div class="container">
             <div class="row g-4 justify-content-center">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card">
-                        <img src="./img/image.png" class="card-img-top" alt="...">
+                    <div class="card card-project">
+                        <img src="./img/image.png" class="card-img-top" alt="Sans-Co Project">
                         <div class="card-body">
                             <h5 class="card-title">Sans-Co</h5>
-                            <p class="card-text">Project study yang dibuat saat Praktik Kerja Lapangan (PKL) dengan Tema Coffe Shop.</p>
+                            <p class="card-text">Project study (PKL)</p>
                             <a href="https://sans-co.glitch.me/" class="btn btn-dark">Sans-Co Project</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card">
-                        <img src="./img/Logo.jpeg" class="card-img-top" alt="...">
+                    <div class="card card-project">
+                        <img src="./img/Logo.jpeg" class="card-img-top" alt="Nasi Uduk 88 Brebes">
                         <div class="card-body">
-                            <h5 class="card-title">Nasi Uduk 88 Brebes berhias</h5>
+                            <h5 class="card-title">Nasi Uduk 88 Brebes</h5>
                             <p class="card-text">Proyek umkm</p>
-                            <a href="https://zahraramanayshilla.github.io/nasiuduk88.github.io/" class="btn btn-dark">Nasi Uduk</a>
+                            <a href="https://zahraramanayshilla.github.io/nasiuduk88.github.io/"
+                                class="btn btn-dark">Nasi Uduk</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card">
-                        <img src="./img/Screenshot 2024-10-29 161032.png" class="card-img-top" alt="...">
+                    <div class="card card-project">
+                        <img src="./img/Screenshot 2024-10-29 161032.png" class="card-img-top" alt="UKK-Gallery">
                         <div class="card-body">
                             <h5 class="card-title">UKK-Gallery</h5>
-                            <p class="card-text">Study project yang dibuat saat Ujian akhir semester membuat tampilan gallery.</p>
-                            <a href="https://github.com/zahraramanayshilla/UKK2024_ZAHRA_R_webgallery.git" class="btn btn-dark">Gallery</a>
+                            <p class="card-text">project Ujian akhir </p>
+                            <a href="https://github.com/zahraramanayshilla/UKK2024_ZAHRA_R_webgallery.git"
+                                class="btn btn-dark">Gallery</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card">
-                        <img src="./img/Logo.png" class="card-img-top" alt="...">
+                    <div class="card card-project">
+                        <img src="./img/Logo.png" class="card-img-top" alt="Calon Dosen">
                         <div class="card-body">
                             <h5 class="card-title">Calon Dosen</h5>
-                            <p class="card-text">Tugas besar Pemograman semester 1</p>
-                            <a href="https://ridwanhakimr.github.io/calondosen.github.io/" class="btn btn-dark">Calon Dosen</a>
-
+                            <p class="card-text">Tugas besar Pemograman </p>
+                            <a href="https://ridwanhakimr.github.io/calondosen.github.io/" class="btn btn-dark">Calon
+                                Dosen</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
+    <!-- ui -->
+    <section class="project pb-5" id="project">
+        <h2 class="text-center m-5 p-5">UI/UX</h2>
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card card-project">
+                        <img src="./img/wanda.png" class="card-img-top" alt="Sans-Co Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Coffe shop</h5>
+                            <p class="card-text">Project Morris</p>
+                            <a href="https://www.figma.com/design/Ujpyi9ovlxOo5h36iRarV9/Kelompok-4-Wanda?node-id=0-1&t=HxB1DnARNNCfeFPZ-1"
+                                class="btn btn-dark">UI Coffe Shop</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <div class="card card-project">
+                        <img src="./img/merdeka.png" class="card-img-top" alt="Nasi Uduk 88 Brebes">
+                        <div class="card-body">
+                            <h5 class="card-title">Hari kemerdekaan</h5>
+                            <p class="card-text">Chalangge kemerdekaan</p>
+                            <a href="https://www.figma.com/design/zxBd29nKvGW7o3d4sVChXI/kemerdekaan-web?node-id=0-1&t=xqKpoLCJth41hBkO-1"
+                                class="btn btn-dark">Merdeka</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
     <!-- contact -->
     <section class="contact pt-5 pb-5 " id="contact">
         <div class="container">
@@ -298,6 +465,8 @@
         });
 
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
