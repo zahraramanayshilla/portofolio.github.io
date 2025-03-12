@@ -6,244 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>profil zahra</title>
     <!-- link boostrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- link-font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <!-- animate -->
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- AOS CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <style>
-        body {
-            /* background: radial-gradient(rgb(129, 196, 255) 1%, rgb(131, 255, 253) 50%, rgb(193, 245, 255) 100%); */
-            background-blend-mode: multiply;
-            scroll-behavior: smooth;
-        }
-
-        .navbar {
-            background: rgba(0, 0, 0, 0.5);
-            margin: 20px;
-            border-radius: 50px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            z-index: 3;
-            width: 100%;
-        }
-
-        .nav-color {
-            background-color: #393939;
-            transition: all ease-in-out 0.3s;
-        }
-
-        .berubah {
-            transition: all ease-in 0.3s;
-        }
-
-        a.nav-link {
-            color: white;
-            font-size: 16px;
-        }
-
-        a.nav-link:hover {
-            font-weight: 700;
-            color: white;
-        }
-
-        .navbar-toggler {
-            border: none;
-            color: white;
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: none;
-            transition: all ease-in-out 0.3s;
-        }
-
-        .berubah {
-            transition: all ease-in 0.3s;
-        }
-
-        a.nav-link {
-            color: white;
-            font-size: 16px;
-        }
-
-        a.nav-link:hover {
-            font-weight: 700;
-            color: white;
-
-        }
-
-        .nav-link .active {
-            font-weight: 600;
-        }
-
-        .hero img {
-            margin-top: 170px;
-            width: 300px;
-            position: relative;
-            display: flex;
-            justify-self: center;
-            align-items: center;
-            width: 20%;
-            border-radius: 100%;
-        }
-
-        footer {
-            background-color: #393939;
-
-        }
-
-        .contact-icon li {
-            list-style-type: none;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            line-height: 30px;
-            padding: 0;
-            margin-left: auto;
-        }
-
-        .contact-icon ul li {
-            margin-left: 0;
-        }
-
-        .contact-icon li a {
-            color: black;
-        }
-
-        .contact-icon li i {
-            margin: 0;
-        }
-
-        .card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            background-color: #ffffff;
-            line-height: 35px;
-        }
-
-        .profile-img {
-            border-radius: 10px;
-        }
-
-        .social-icons a {
-            color: #6c757d;
-            margin: 0 5px;
-            font-size: 20px;
-        }
-
-        .card-img-top {
-            aspect-ratio: 1 / 1;
-            /* Membuat gambar berbentuk persegi */
-            object-fit: cover;
-            /* Memastikan gambar menutupi area tanpa distorsi */
-        }
-
-        .card-project {
-            height: 100%;
-            /* Memastikan semua card memiliki tinggi yang sama */
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-body {
-            flex-grow: 1;
-            /* Memastikan card body mengisi sisa ruang */
-        }
-
-        .skill-card {
-            transition: transform 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-25px);
-        }
-
-        .card-project {
-            transition: transform 0.3s ease;
-        }
-
-        .card-project:hover {
-            transform: translateY(-25px);
-        }
-
-        .about {
-            transition: transform 0.3s ease;
-        }
-
-        .about:hover {
-            transform: translateY(-25px);
-        }
-         /* Animasi mengetik */
-         .typing-container {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 24px;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 2px solid #000;
-            width: fit-content;
-            margin: 0 auto; /* Pusatkan animasi */
-        }
-
-        .typing {
-            display: inline-block;
-            overflow: hidden;
-            letter-spacing: 2px;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #000 }
-        }
-
-        .card-project {
-    background: rgba(0, 0, 0, 0.6); /* Warna hitam dengan transparansi 60% */
-    color: white; /* Warna teks agar kontras */
-    border: none; /* Menghilangkan border */
-}
-
-
-.card-project img {
-    opacity: 0.9; /* Sedikit transparan untuk efek elegan */
-    transition: 0.3s ease-in-out;
-}
-
-.card-project img:hover {
-    opacity: 1; /* Kembali full opacity saat hover */
-}
-
-    </style>
-    <div class="pat "></div>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg position-fixed w-100 p-3 mx-auto  berubah">
+    <nav class="navbar navbar-expand-lg navbar-dark position-fixed w-100 p-3 mx-auto berubah">
         <div class="container">
+
+            <!-- Toggle Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="bi bi-list"></i>
             </button>
+
+            <!-- Navbar Items -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link" href="#about">About</a>
@@ -261,7 +54,6 @@
             </div>
         </div>
     </nav>
-
 
     <!-- hello im zahra -->
     <section class="hero">
@@ -283,9 +75,8 @@
         </div>
     </section>
 
-    <div class="container d-flex justify-content-center align-items-center vh-100 about " id="about" data-aos="fade-up"
-        data-aos-duration="1500">
-        <div class="card p-5">
+    <div class="container d-flex justify-content-center align-items-center vh-100 about " id="about">
+        <div class="card p-5" data-aos="fade-up" data-aos-duration="1000">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
                     <img alt="Profile picture of a professional user experience designer" class="img-fluid profile-img"
@@ -462,7 +253,7 @@
     </section>
 
     <!-- contact -->
-    <section class="contact pt-5 pb-5 " id="contact">
+    <section class="contact pt-5 pb-5 " id="contact" data-aos="slide-right" data-aos-duration="1000">
         <div class="container">
             <h3>🤝 Let’s get in touch</h3>
             <br>
@@ -504,6 +295,9 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         // navbar
         const navbar = document.getElementsByTagName('nav')[0];
@@ -516,21 +310,8 @@
             }
         });
 
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        // Inisialisasi AOS
-        AOS.init({
-            once: true, // Animasi hanya terjadi sekali
-            offset: 120, // Jarak trigger animasi dari bagian atas layar (dalam piksel)
-            delay: 200, // Delay animasi (dalam milidetik)
-        });
-
-         // Optional: Tambahkan lebih banyak kalimat dan loop melalui mereka
-         const sentences = [
+        // ketikan welcome
+        const sentences = [
             "Welcome to my personal Website 👋",
             "I am a web developer.",
             "I love me and me.",
@@ -569,6 +350,13 @@
         }
 
         typeSentence(sentences[index], typingElement, 1000);
+
+        // animasi
+        AOS.init({
+            once: true, // Animasi hanya terjadi sekali
+            offset: 120, // Jarak trigger animasi dari bagian atas layar (dalam piksel)
+            delay: 200, // Delay animasi (dalam milidetik)
+        });
     </script>
 
 </html>

@@ -1,0 +1,233 @@
+body {
+    /* background: radial-gradient(rgb(129, 196, 255) 1%, rgb(131, 255, 253) 50%, rgb(193, 245, 255) 100%); */
+    background-blend-mode: multiply;
+    scroll-behavior: smooth;
+    background: linear-gradient(45deg,rgb(121, 121, 121),rgb(75, 75, 75),rgb(255, 255, 255),rgb(164, 164, 165),rgb(255, 255, 255),rgb(192, 192, 192));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    width: 100%;
+}
+
+.nav-color {
+    background-color: #393939;
+    transition: all ease-in-out 0.3s;
+}
+
+a.nav-link {
+    color: white;
+    font-size: 16px;
+}
+
+a.nav-link:hover {
+    font-weight: 700;
+    color: white;
+}
+
+.navbar-toggler {
+    border: none;
+    color: white;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    transition: all ease-in-out 0.3s;
+}
+
+a.nav-link {
+    color: white;
+    font-size: 16px;
+}
+
+a.nav-link:hover {
+    font-weight: 700;
+    color: white;
+
+}
+
+.nav-link .active {
+    font-weight: 600;
+}
+
+.berubah {
+    transition: all ease-in 0.3s;
+}
+
+.hero img {
+    margin-top: 170px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 20%;
+    border-radius: 100%;
+}
+
+
+.contact-icon li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    line-height: 30px;
+    padding: 0;
+    margin-left: auto;
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.2); /* Latar belakang transparan */
+    backdrop-filter: blur(10px); /* Efek blur untuk glass effect */
+    border-radius: 15px; /* Sudut melengkung */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow untuk efek kedalaman */
+    line-height: 2.5;
+}
+
+.profile-img {
+    border-radius: 10px;
+}
+
+.social-icons a {
+    color: #6c757d;
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+.card-img-top {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-project {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.skill-card {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-25px);
+}
+
+.card-project {
+    transition: transform 0.3s ease;
+}
+
+.card-project:hover {
+    transform: translateY(-25px);
+}
+
+.about {
+    transition: transform 0.3s ease;
+}
+
+.about:hover {
+    transform: translateY(-25px);
+}
+
+/* Animasi mengetik */
+.typing-container {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #000;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 2px;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #000
+    }
+}
+
+.card-project {
+    background: rgba(255, 255, 255, 0.2); /* Latar belakang transparan */
+    backdrop-filter: blur(10px); /* Efek blur untuk glass effect */
+    border-radius: 15px; /* Sudut melengkung */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow untuk efek kedalaman */
+    padding: 20px;
+    color: black; /* Warna teks */
+}
+
+
+.card-project img {
+    opacity: 0.9;
+    /* Sedikit transparan untuk efek elegan */
+    transition: 0.3s ease-in-out;
+}
+
+.card-project img:hover {
+    opacity: 1;
+    /* Kembali full opacity saat hover */
+}
+.contact-icon ul li {
+    margin-left: 0;
+}
+
+.contact-icon li a {
+    color: black;
+}
+
+.contact-icon li i {
+    margin: 0;
+}
+
+footer {
+    background-color: #393939;
+
+}
