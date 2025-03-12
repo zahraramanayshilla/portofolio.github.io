@@ -18,8 +18,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <!-- animate -->
-   <!-- AOS CSS CDN -->
-   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- AOS CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
         body {
             /* background: radial-gradient(rgb(129, 196, 255) 1%, rgb(131, 255, 253) 50%, rgb(193, 245, 255) 100%); */
@@ -183,6 +183,50 @@
         .about:hover {
             transform: translateY(-25px);
         }
+         /* Animasi mengetik */
+         .typing-container {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #000;
+            width: fit-content;
+            margin: 0 auto; /* Pusatkan animasi */
+        }
+
+        .typing {
+            display: inline-block;
+            overflow: hidden;
+            letter-spacing: 2px;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #000 }
+        }
+
+        .card-project {
+    background: rgba(0, 0, 0, 0.6); /* Warna hitam dengan transparansi 60% */
+    color: white; /* Warna teks agar kontras */
+    border: none; /* Menghilangkan border */
+}
+
+
+.card-project img {
+    opacity: 0.9; /* Sedikit transparan untuk efek elegan */
+    transition: 0.3s ease-in-out;
+}
+
+.card-project img:hover {
+    opacity: 1; /* Kembali full opacity saat hover */
+}
+
     </style>
     <div class="pat "></div>
 
@@ -226,7 +270,9 @@
                 <img src="./img/webcam-toy-photo35-removebg-preview.png">
                 <h2 class="text-center mb-3 mt-3">Hello I'm </h2>
                 <h2 class="text-center mb-2 ">Zahra Ramanayshilla Sopian</h2>
-                <p class="text-center mb-5 mt-3 ">Welcome to my personal Website 👋 </p>
+                <div class="typing-container">
+                    <span class="typing">Welcome to my personal Website 👋</span>
+                </div>
                 <div class="service mt-5 d-flex justify-content-center align-items-center" id="review">
 
                     <div class="review-button">
@@ -237,8 +283,8 @@
         </div>
     </section>
 
-    <div class="container d-flex justify-content-center align-items-center vh-100 about " id="about"
-        data-aos="fade-up" data-aos-duration="1500">
+    <div class="container d-flex justify-content-center align-items-center vh-100 about " id="about" data-aos="fade-up"
+        data-aos-duration="1500">
         <div class="card p-5">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
@@ -306,7 +352,7 @@
                     </div>
                 </div>
                 <!-- Skill Card 2 -->
-                <div class="col-12 col-md-6 col-lg-4"data-aos="flip-left" data-aos-duration="1000">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="flip-left" data-aos-duration="1000">
                     <div class="card skill-card h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-palette fa-3x mb-3 text-dark"></i>
@@ -482,6 +528,47 @@
             offset: 120, // Jarak trigger animasi dari bagian atas layar (dalam piksel)
             delay: 200, // Delay animasi (dalam milidetik)
         });
+
+         // Optional: Tambahkan lebih banyak kalimat dan loop melalui mereka
+         const sentences = [
+            "Welcome to my personal Website 👋",
+            "I am a web developer.",
+            "I love me and me.",
+            "Feel free to explore my work."
+        ];
+
+        const typingElement = document.querySelector('.typing');
+        let index = 0;
+
+        function typeSentence(sentence, element, delay) {
+            let i = 0;
+            element.textContent = "";
+            const interval = setInterval(() => {
+                if (i < sentence.length) {
+                    element.textContent += sentence.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(interval);
+                    setTimeout(() => deleteSentence(element, delay), 1000);
+                }
+            }, 100);
+        }
+
+        function deleteSentence(element, delay) {
+            let sentence = element.textContent;
+            const interval = setInterval(() => {
+                if (sentence.length > 0) {
+                    sentence = sentence.slice(0, -1);
+                    element.textContent = sentence;
+                } else {
+                    clearInterval(interval);
+                    index = (index + 1) % sentences.length;
+                    setTimeout(() => typeSentence(sentences[index], element, delay), 500);
+                }
+            }, 50);
+        }
+
+        typeSentence(sentences[index], typingElement, 1000);
     </script>
 
 </html>
