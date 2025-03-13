@@ -9,7 +9,15 @@
      }
  });
 
+ // ketikan welcome
+// 
 
+ // animasi
+ AOS.init({
+     once: true, // Animasi hanya terjadi sekali
+     offset: 120, // Jarak trigger animasi dari bagian atas layar (dalam piksel)
+     delay: 200, // Delay animasi (dalam milidetik)
+ });
 
 // Fungsi untuk mengirim pesan ke WhatsApp
 document.getElementById('whatsappForm').addEventListener('submit', function (e) {
