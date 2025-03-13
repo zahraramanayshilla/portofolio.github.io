@@ -10,45 +10,45 @@
  });
 
  // ketikan welcome
- const sentences = [
-     "Welcome to my personal Website 👋",
-     "I am a web developer.",
-     "I love me and me.",
-     "Feel free to explore my work."
- ];
+//  const sentences = [
+//      "Welcome to my personal Website 👋",
+//      "I am a web developer.",
+//      "I love me and me.",
+//      "Feel free to explore my work."
+//  ];
 
- const typingElement = document.querySelector('.typing');
- let index = 0;
+//  const typingElement = document.querySelector('.typing');
+//  let index = 0;
 
- function typeSentence(sentence, element, delay) {
-     let i = 0;
-     element.textContent = "";
-     const interval = setInterval(() => {
-         if (i < sentence.length) {
-             element.textContent += sentence.charAt(i);
-             i++;
-         } else {
-             clearInterval(interval);
-             setTimeout(() => deleteSentence(element, delay), 1000);
-         }
-     }, 100);
- }
+//  function typeSentence(sentence, element, delay) {
+//      let i = 0;
+//      element.textContent = "";
+//      const interval = setInterval(() => {
+//          if (i < sentence.length) {
+//              element.textContent += sentence.charAt(i);
+//              i++;
+//          } else {
+//              clearInterval(interval);
+//              setTimeout(() => deleteSentence(element, delay), 1000);
+//          }
+//      }, 100);
+//  }
 
- function deleteSentence(element, delay) {
-     let sentence = element.textContent;
-     const interval = setInterval(() => {
-         if (sentence.length > 0) {
-             sentence = sentence.slice(0, -1);
-             element.textContent = sentence;
-         } else {
-             clearInterval(interval);
-             index = (index + 1) % sentences.length;
-             setTimeout(() => typeSentence(sentences[index], element, delay), 500);
-         }
-     }, 50);
- }
+//  function deleteSentence(element, delay) {
+//      let sentence = element.textContent;
+//      const interval = setInterval(() => {
+//          if (sentence.length > 0) {
+//              sentence = sentence.slice(0, -1);
+//              element.textContent = sentence;
+//          } else {
+//              clearInterval(interval);
+//              index = (index + 1) % sentences.length;
+//              setTimeout(() => typeSentence(sentences[index], element, delay), 500);
+//          }
+//      }, 50);
+//  }
 
- typeSentence(sentences[index], typingElement, 1000);
+//  typeSentence(sentences[index], typingElement, 1000);
 
  // animasi
  AOS.init({
