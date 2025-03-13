@@ -264,6 +264,27 @@ a.nav-link:hover {
   opacity: 1;
   /* Kembali full opacity saat hover */
 }
+
+.form-control {
+  background-color: rgba(96, 96, 96, 0.5); /* Hitam transparan */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+  color: white; /* Warna teks putih */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Warna placeholder transparan */
+}
+
+.form-control:focus {
+  background-color: rgba(0, 0, 0, 0.7); /* Lebih gelap saat focus */
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Efek shadow saat focus */
+  color: white;
+}
+
 .contact-icon ul li {
   margin-left: 0;
 }
