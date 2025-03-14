@@ -216,93 +216,94 @@ a.nav-link:hover {
     border-color: #000;
   }
 }
-.vertical-timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 0;
-}
+ .vertical-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
 
-/* Garis vertikal di tengah */
-.vertical-timeline::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  background-color: #393939;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-  z-index: 1;
-}
+        /* Garis vertikal di tengah */
+        .vertical-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #393939;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            z-index: 1;
+        }
 
-/* Container untuk card */
-.timeline-card-wrapper {
-  padding: 10px 40px;
-  position: relative;
-  width: 50%;
-  z-index: 2;
-}
+        /* Container untuk card */
+        .timeline-card-wrapper {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            z-index: 2;
+        }
 
-/* Card di sebelah kiri */
-.timeline-card-left {
-  left: 0;
-}
+        /* Card di sebelah kiri */
+        .timeline-card-left {
+            left: 0;
+        }
 
-/* Card di sebelah kanan */
-.timeline-card-right {
-  left: 50%;
-}
+        /* Card di sebelah kanan */
+        .timeline-card-right {
+            left: 50%;
+        }
 
-/* Styling untuk card */
-.timeline-card {
-  position: relative;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        /* Styling untuk card */
+        .timeline-card {
 
-/* Lingkaran di tengah garis */
-.timeline-card-wrapper::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: #000000;
-  border: 4px solid #fff;
-  border-radius: 50%;
-  top: 50%;
-  right: -17px;
-  z-index: 3;
-  transform: translateY(-50%);
-}
+            position: relative;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.timeline-card-right::after {
-  left: -17px;
-}
+        /* Lingkaran di tengah garis */
+        .timeline-card-wrapper::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #000000;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            top: 50%;
+            right: -17px;
+            z-index: 3;
+            transform: translateY(-50%);
+        }
 
-/* Animasi saat card muncul */
-.timeline-card-wrapper {
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
+        .timeline-card-right::after {
+            left: -17px;
+        }
 
-.timeline-card-left {
-  transform: translateX(-100px);
-}
+        /* Animasi saat card muncul */
+        .timeline-card-wrapper {
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-.timeline-card-right {
-  transform: translateX(100px);
-}
+        .timeline-card-left {
+            transform: translateX(-100px);
+        }
 
-.timeline-card-wrapper.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
+        .timeline-card-right {
+            transform: translateX(100px);
+        }
+
+        .timeline-card-wrapper.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
 /* Styling untuk card */
 .card-project {
   position: relative;
