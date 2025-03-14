@@ -40,3 +40,27 @@ document.getElementById('whatsappForm').addEventListener('submit', function (e) 
     // Buka link WhatsApp di tab baru
     window.open(whatsappUrl, '_blank');
 });
+
+//scrol
+document.addEventListener("DOMContentLoaded", function () {
+    const timelineCards = document.querySelectorAll(".timeline-card-wrapper");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                } else {
+                    entry.target.classList.remove("visible");
+                }
+            });
+        },
+        {
+            threshold: 0.5, // Card akan muncul saat 50% terlihat
+        }
+    );
+
+    timelineCards.forEach((card) => {
+        observer.observe(card);
+    });
+});

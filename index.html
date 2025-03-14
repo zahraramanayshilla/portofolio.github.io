@@ -18,7 +18,93 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@latest/index.js"></script>
 
+    <style>
+        .vertical-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
 
+        /* Garis vertikal di tengah */
+        .vertical-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #007bff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            z-index: 1;
+        }
+
+        /* Container untuk card */
+        .timeline-card-wrapper {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            z-index: 2;
+        }
+
+        /* Card di sebelah kiri */
+        .timeline-card-left {
+            left: 0;
+        }
+
+        /* Card di sebelah kanan */
+        .timeline-card-right {
+            left: 50%;
+        }
+
+        /* Styling untuk card */
+        .timeline-card {
+            position: relative;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Lingkaran di tengah garis */
+        .timeline-card-wrapper::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #007bff;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            top: 50%;
+            right: -17px;
+            z-index: 3;
+            transform: translateY(-50%);
+        }
+
+        .timeline-card-right::after {
+            left: -17px;
+        }
+
+        /* Animasi saat card muncul */
+        .timeline-card-wrapper {
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .timeline-card-left {
+            transform: translateX(-100px);
+        }
+
+        .timeline-card-right {
+            transform: translateX(100px);
+        }
+
+        .timeline-card-wrapper.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
 </head>
 
 <body>
@@ -78,6 +164,7 @@
         </div>
     </section>
 
+    <!-- about -->
     <div class="container d-flex justify-content-center align-items-center vh-100 about" style="margin-top: 200px;"
         id="about">
         <div class="card p-5" data-aos="fade-up" data-aos-duration="1000">
@@ -120,6 +207,44 @@
             </div>
         </div>
     </div>
+
+    <section class="vertical-timeline">
+        <!-- Card 1 -->
+        <div class="timeline-card-wrapper timeline-card-left">
+            <div class="timeline-card">
+                <h5 class="card-title">Project 1</h5>
+                <p class="card-text">Deskripsi singkat tentang Project 1.</p>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="timeline-card-wrapper timeline-card-right">
+            <div class="timeline-card">
+                <h5 class="card-title">Project 2</h5>
+                <p class="card-text">Deskripsi singkat tentang Project 2.</p>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="timeline-card-wrapper timeline-card-left">
+            <div class="timeline-card">
+                <h5 class="card-title">Project 3</h5>
+                <p class="card-text">Deskripsi singkat tentang Project 3.</p>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="timeline-card-wrapper timeline-card-right">
+            <div class="timeline-card">
+                <h5 class="card-title">Project 4</h5>
+                <p class="card-text">Deskripsi singkat tentang Project 4.</p>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="timeline-card-wrapper timeline-card-left">
+            <div class="timeline-card">
+                <h5 class="card-title">Project 5</h5>
+                <p class="card-text">Deskripsi singkat tentang Project 5.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Skills Section -->
     <div class="dash-content" id="skills" data-aos="fade-up" data-aos-duration="1000">
@@ -207,7 +332,7 @@
                         </div>
                         <!-- Deskripsi hover -->
                         <div class="card-description">
-                            <p class="card-text">Proyek umkm</p>
+                            <p class="card-text">Proyek umkm on going</p>
                             <a href="https://zahraramanayshilla.github.io/nasiuduk88.github.io/"
                                 class="btn btn-dark">Nasi Uduk</a>
                         </div>
@@ -222,7 +347,7 @@
                         </div>
                         <!-- Deskripsi hover -->
                         <div class="card-description">
-                            <p class="card-text">Tugas besar Pemograman </p>
+                            <p class="card-text">Tugas besar Pemograman semester 1</p>
                             <a href="https://ridwanhakimr.github.io/calondosen.github.io/" class="btn btn-dark">Calon
                                 Dosen</a>
                         </div>
@@ -232,11 +357,11 @@
                     <div class="card card-project">
                         <img src="./img/Screenshot 2025-03-14 061146.png" class="card-img-top" alt="Sans-Co Project">
                         <div class="card-body">
-                            <h5 class="card-title">Coffe shop</h5>
+                            <h5 class="card-title">Coffe shop UI</h5>
                         </div>
                         <!-- Deskripsi hover -->
                         <div class="card-description">
-                            <p class="card-text">Project Morris</p>
+                            <p class="card-text">Project Morris </p>
                             <a href="https://www.figma.com/design/Ujpyi9ovlxOo5h36iRarV9/Kelompok-4-Wanda?node-id=0-1&t=HxB1DnARNNCfeFPZ-1"
                                 class="btn btn-dark">Coffe Shop UI</a>
                         </div>
@@ -247,7 +372,7 @@
                         <img src="./img/Screenshot 2025-03-13 071059.png" class="card-img-top"
                             alt="Nasi Uduk 88 Brebes">
                         <div class="card-body">
-                            <h5 class="card-title">Sans-co</h5>
+                            <h5 class="card-title">Sans-co UI</h5>
                            
                         </div>
                         <!-- Deskripsi hover -->
