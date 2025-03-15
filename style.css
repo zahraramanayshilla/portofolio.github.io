@@ -2,7 +2,7 @@ body {
   background-blend-mode: multiply;
   scroll-behavior: smooth;
   background: linear-gradient(
-    60deg,
+    45deg,
     rgb(121, 121, 121),
     rgb(75, 75, 75),
     rgb(255, 255, 255),
@@ -17,7 +17,7 @@ body {
   max-width: 1200px;
 }
 
-/* @keyframes gradientAnimation {
+@keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
@@ -27,7 +27,7 @@ body {
   100% {
     background-position: 0% 50%;
   }
-} */
+}
 
 .navbar {
   align-items: center;
