@@ -17,7 +17,7 @@ body {
   max-width: 1200px;
 }
 
-@keyframes gradientAnimation {
+/* @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
@@ -27,7 +27,7 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 .navbar {
   align-items: center;
