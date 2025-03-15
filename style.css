@@ -2,7 +2,7 @@ body {
   /* background: radial-gradient(rgb(129, 196, 255) 1%, rgb(131, 255, 253) 50%, rgb(193, 245, 255) 100%); */
   background-blend-mode: multiply;
   scroll-behavior: smooth;
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     rgb(121, 121, 121),
     rgb(75, 75, 75),
@@ -11,7 +11,7 @@ body {
     rgb(255, 255, 255),
     rgb(192, 192, 192)
   );
-  background-size: 400% 400%;
+  background-size: 400% 400%; */
   animation: gradientAnimation 15s ease infinite;
 }
 
