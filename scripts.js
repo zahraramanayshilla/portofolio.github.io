@@ -9,9 +9,6 @@
      }
  });
 
- // ketikan welcome
-// 
-
  // animasi
  AOS.init({
      once: true, // Animasi hanya terjadi sekali
