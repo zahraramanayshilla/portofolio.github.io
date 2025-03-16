@@ -124,9 +124,9 @@ a.nav-link:hover {
   flex: 1 1 200px; /* Flexbox untuk responsif */
 }
 
-.box img {
+/* .box img {
   margin-bottom: 15px;
-}
+} */
 
 .box .number {
   font-size: 1.5rem;
