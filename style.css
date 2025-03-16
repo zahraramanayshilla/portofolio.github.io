@@ -10,7 +10,7 @@ body {
     rgb(255, 255, 255),
     rgb(192, 192, 192)
   );
-  background-size: 400% 400%;
+  background-size: 100%;
   animation: gradientAnimation 15s ease infinite;
 }
 .container {
