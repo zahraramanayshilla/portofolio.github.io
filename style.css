@@ -91,7 +91,25 @@ a.nav-link:hover {
   border-radius: 10px;
 }
 
+.social-icons a {
+  color: #6c757d;
+}
 
+.card-img-top {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-project {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1;
+}
 
 .skill-card {
   transition: transform 0.3s ease;
