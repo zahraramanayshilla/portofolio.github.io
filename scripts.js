@@ -16,6 +16,25 @@
      delay: 200, // Delay animasi (dalam milidetik)
  });
 
+const themeToggle = document.getElementById("themeToggle");
+const mobileToggle = document.getElementById("mobileToggle");
+const closeMenu = document.getElementById("closeMenu");
+const mobileMenu = document.getElementById("mobileMenu");
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+
+mobileToggle.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+});
+closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("flex");
+});
+
 // Fungsi untuk mengirim pesan ke WhatsApp
 document.getElementById('whatsappForm').addEventListener('submit', function (e) {
     e.preventDefault(); // Mencegah form submit default

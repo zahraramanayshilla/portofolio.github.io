@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zra Web</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/z2.png" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
@@ -135,7 +135,7 @@
 
     </section>
 
-    <section class="bg-[var(--primary-color)]  text-white py-16 px-6 rounded-3xl" >
+    <section class="bg-[var(--primary-color)]  text-white py-16 px-6 rounded-3xl">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Bagian Kiri -->
             <div class="space-y-6">
@@ -353,7 +353,8 @@
                 class="flex items-center justify-between bg-[var(--glass-bg)] border border-blue-300 rounded-full px-5 py-4 shadow-base w-full max-w-md">
                 <div class="flex items-center space-x-4">
                     <!-- Ganti placeholder div jadi gambar -->
-                    <img src="img/Screenshot 2025-03-14 061146.png" alt="Logo" class="w-16 h-16 rounded-full object-cover">
+                    <img src="img/Screenshot 2025-03-14 061146.png" alt="Logo"
+                        class="w-16 h-16 rounded-full object-cover">
                     <div>
                         <h3 class="font-semibold text-blue-950 text-lg">UI/UX Coffe Shop</h3>
                         <p class="text-sm text-yellow-50 truncate w-40">Project UI/UX</p>
@@ -448,27 +449,10 @@
         </div>
     </footer>
 
+    <!-- AOS JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="scripts.js"></script>
 
-    <script>
-        const themeToggle = document.getElementById("themeToggle");
-        const mobileToggle = document.getElementById("mobileToggle");
-        const closeMenu = document.getElementById("closeMenu");
-        const mobileMenu = document.getElementById("mobileMenu");
-
-        themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-        });
-
-        mobileToggle.addEventListener("click", () => {
-            mobileMenu.classList.remove("hidden");
-            mobileMenu.classList.add("flex");
-        });
-        closeMenu.addEventListener("click", () => {
-            mobileMenu.classList.add("hidden");
-            mobileMenu.classList.remove("flex");
-        });
-    </script>
 
 </body>
 
