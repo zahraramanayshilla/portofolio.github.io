@@ -2,381 +2,474 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="XikThFitnJAQMc41slL9onZrKjWi7OY_50MnMgyMar4" />
-    <link rel="shortcut icon" href="img/z.png" type="image">
-    <!-- link boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- link-font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" />
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- AOS CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- traker -->
-    <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@main/index.js"></script>
-    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@latest/index.js"></script> -->
-    <title>profil zahra</title>
-    <style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zra Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="icon" type="image/png" href="img/z2.png" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        :root {
+            --primary-color: #3674B5;
+            --secon-color: #578FCA;
+            --third-color: #F5F0CD;
+            --four-color: #FADA7A;
+
+            --primary-hover: #2f639c;
+            --secon-hover: #4a7cb2;
+            --third-hover: #eae3b8;
+            --four-hover: #e6c85f;
+
+            --text-color: #ffffff;
+
+            --glass-bg: rgba(21, 96, 189, 0.4);
+            --glass-bg2: rgba(255, 255, 255, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .navbar-custom {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .dark-mode {
+            background: #252538;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top p1 p-lg-3 mt-3 berubah mx-3 ">
-        <div class="container">
-            <!-- Logo (Muncul hanya saat responsive) -->
-            <a class="navbar-brand d-block d-lg-none" href="#">
-                <img src="./img/z.png" style="width:35px; border-radius: 100%;" alt="">
-            </a>
 
-            <!-- Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+    <!-- ✅ Navbar -->
+    <nav
+        class="bg-[var(--glass-bg)]  fixed top-4 left-1/2 -translate-x-1/2 navbar-custom rounded-full shadow-lg max-w-7xl w-full px-6 py-3 flex justify-between items-center z-50">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center">
+            <p class="text-2xl font-bold text-[var(--text-color)]">Zra_</p>
+        </a>
 
-            <!-- Navbar Items -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item mx-3">
-                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#project">Project</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+        <!-- Desktop Menu -->
+        <ul class="hidden lg:flex space-x-10 font-medium text-[var(--text-color)]">
+            <li><a href="index.html" class="hover:text-[var(--third-color)]">Home</a></li>
+            <li><a href="#about" class="hover:text-[var(--third-color)]">About</a></li>
+            <li><a href="#project" class="hover:text-[var(--third-color)]">Projects</a></li>
+            <li><a href="#contact" class="hover:text-[var(--third-color)]">Contact</a></li>
+        </ul>
 
+        <!-- Theme toggle & mobile button -->
+        <div class="flex items-center gap-4">
+            <button id="themeToggle"
+                class="bg-[var(--four-color)] text-white rounded-full w-10 h-10 flex justify-center items-center hover:bg-[#e96f1f] transition">
+                🌙
+                <button id="mobileToggle" class="text-[var(--text-color)] text-2xl lg:hidden">
+                    <i class='bx bx-menu-alt-right'></i>
+                </button>
         </div>
     </nav>
 
-    <!-- hello im zahra -->
-    <section class="hero">
-        <div class="container d-flex justify-content-center align-items-center">
-            <div class="col-12 col-md-8 col-lg-6 text-center">
-                <!-- Gambar dengan animasi -->
-                <img src="./img/webcam-toy-photo35-removebg-preview.png" class="img-fluid" data-aos="fade-down"
-                    data-aos-duration="1000" alt="Profile Picture">
+    <!-- ✅ Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white hidden flex-col justify-center items-center text-center z-40">
+        <button id="closeMenu" class="absolute top-4 right-4 text-3xl">✖</button>
+        <ul class="space-y-6 text-xl font-medium">
+            <li><a href="index.html" class="hover:text-[var(--third-color)]">Home</a></li>
+            <li><a href="#about" class="hover:text-[var(--third-color)]">About</a></li>
+            <li><a href="#project" class="hover:text-[var(--third-color)]">Projects</a></li>
+            <li><a href="#contact" class="hover:text-[var(--third-color)]">Contact </a></li>
+        </ul>
+    </div>
 
-                <!-- Teks dengan animasi -->
-                <h2 class="mb-3 mt-3" data-aos="flip-up" data-aos-duration="1200">Hello I'm</h2>
-                <h2 class="mb-3" data-aos="flip-up" data-aos-duration="1400">Zahra Ramanayshilla Sopian</h2>
-                <p class="mb-3" data-aos="flip-up" data-aos-duration="1500">Welcome to my personal Website 👋</p>
-
-                <!-- Tombol dengan animasi -->
-                <div class="service mt-5" id="review">
-                    <div class="review-button" data-aos="fade-up" data-aos-duration="1000">
-                        <a href="#about" type="button" class="btn btn-dark">About Me</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section class="mt-20 pt-32 pb-20 flex justify-center items-center text-center">
+        <div class="max-w-xl">
+            <img src="./img/ara 2.png" alt="Profile"
+                class="mx-auto w-48 h-48 rounded-full object-cover object-center shadow-xl mb-6 transition-transform duration-500 hover:scale-110 hover:-rotate-6">
+            <h2 class="text-xl font-medium mb-2">Hello I'm</h2>
+            <h1 class="text-4xl font-bold mb-4 text-blue-900">Zahra Ramanayshilla Sopian</h1>
+            <p class="text-gray-600 mb-6">Welcome to my personal Website 👋</p>
+            <a href="#about"
+                class="inline-block bg-[var(--secon-color)]  text-white px-6 py-2 rounded-full hover:bg-[var(--secon-hover)]  transition">
+                About Me
+            </a>
         </div>
     </section>
 
-    <!-- about -->
-    <div class="container d-flex justify-content-center align-items-center vh-100 about " style="margin-bottom: 150px;"
-        id="about">
-        <div class="card p-5" data-aos="fade-up" data-aos-duration="1000">
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center">
-                    <img alt="Profile picture of a professional user experience designer" class="img-fluid profile-img"
-                        height="150" src="./img/webcam-toy-photo35.jpg" width="250" />
-                    <div class="social-icons mt-3">
+    <section class="flex justify-center items-center py-16" id="about">
+        <div
+            class="w-full max-w-5xl mx-auto p-8 rounded-2xl border border-yellow-300 bg-gradient-to-r from-yellow-50 to-amber-50 shadow-lg">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
 
-                        <a href="https://www.linkedin.com/in/zahra-ramanayshilla-sopian-2a5375351/">
-                            <i class="fa-brands fa-linkedin fs-3"></i>
-                            </i>
-                        </a>
-
-                    </div>
+                <!-- Foto -->
+                <div class="flex flex-col items-center flex-shrink-0">
+                    <img src="./img/ara.jpg" alt="Profile" class="w-40 h-40 rounded-2xl object-cover shadow-md">
+                    <button
+                        class="mt-5 px-6 py-2 bg-[var(--secon-color)] text-white rounded-full shadow hover:bg-[var(--secon-hover)] transition duration-300">
+                        My Resume
+                    </button>
                 </div>
-                <div class="col-md-8">
-                    <h2>
-                        I Am a Junior Student Learning Web Development
+
+                <!-- Konten -->
+                <div class="text-center md:text-left space-y-4">
+                    <h2 class="text-2xl font-bold text-yellow-900">
+                        I Am a Junior Web Developer
                     </h2>
-                    <p>
-                        I am currently learning how to design and develop websites, from layout to functionality.
-                        My focus is on building simple websites, web services, and online stores as part of my learning
-                        journey.
+                    <p class="text-gray-700 leading-relaxed">
+                        I am currently learning how to design and develop websites, from layout to functionality. My
+                        focus
+                        is on
+                        building simple websites, web services, and online stores as part of my learning journey. I am
+                        passionate
+                        about understanding user experience and creating visually appealing, responsive web designs.
                     </p>
-                    <p>
-                        I am passionate about understanding user experience and creating visually appealing, responsive
-                        web designs.
-                    </p>
-                    <div class="mt-3">
-                        <a class="btn btn-dark me-2" href="#contact">
-                            Contact me
-                        </a>
-                        <a class="btn btn-outline-secondary"
-                            href="https://drive.google.com/file/d/1OHQJkv701gkYg4lX2WC3g8pcEAeaP7n7/view?usp=drive_link">
-                            My Resume
-                        </a>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Judul Section -->
-    <div class="text-center mb-5 mt-5">
-        <h3>Education</h3>
-    </div>
-    <!-- Timeline Section -->
-    <section class="vertical-timeline">
-        <!-- Card 1 -->
-        <div class="timeline-card-wrapper timeline-card-left">
-            <div class="timeline-card">
-                <h5 class="card-title">SMK Angkasa</h5>
-                <p class="card-text">tahun 2022-2024</p>
-            </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="timeline-card-wrapper timeline-card-right">
-            <div class="timeline-card">
-                <h5 class="card-title">Universitas Logistik dan Bisnis Internasional</h5>
-                <p class="card-text">Tahun 2024 - Sekarang</p>
             </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="timeline-card-wrapper timeline-card-left">
-            <div class="timeline-card">
-                <h5 class="card-title">Learning X</h5>
-                <p class="card-text">Bimbel 3 semester tahun 2022-2023</p>
-            </div>
-        </div>
+
     </section>
 
-    <!-- Skills Section -->
-    <div class="dash-content pt-5 mt-5" id="skills" data-aos="fade-up" data-aos-duration="1000">
-
-        <h3 class="text-center ">What can I do?</h3>
-    </div>
-
-    <section class="skills py-5 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Skill Card 1 -->
-                <div class="col-12 col-md-6 col-lg-4 " data-aos="flip-left" data-aos-duration="1000">
-                    <div class="card skill-card h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-code fa-3x mb-3 text-dark"></i>
-                            <h5 class="card-title">Web Development</h5>
-                            <p class="card-text">Proficient in HTML, CSS, JavaScript, Php, and frameworks like Bootstrap
-                                and Tailwind.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Skill Card 2 -->
-                <div class="col-12 col-md-6 col-lg-4" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="card skill-card h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-palette fa-3x mb-3 text-dark"></i>
-                            <h5 class="card-title">UI/UX Design</h5>
-                            <p class="card-text">Experienced in designing user-friendly interfaces using Figma and
-                                Canva.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Skill Card 3 -->
-                <div class="col-12 col-md-6 col-lg-4" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="card skill-card h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-database fa-3x mb-3 text-dark"></i>
-                            <h5 class="card-title">Database Management</h5>
-                            <p class="card-text">Skilled in managing databases using MySQL and MongoDB.</p>
-                        </div>
-                    </div>
-                </div>
-
+    <section class="bg-[var(--primary-color)]  text-white py-16 px-6 rounded-3xl" >
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Bagian Kiri -->
+            <div class="space-y-6">
+                <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+                    What Can I Do For <br> Your Needs
+                </h2>
+                <p class="text-gray-300">
+                    It is easier to entrust the work to the experts because they are able to provide
+                    the best results with reliable quality
+                </p>
             </div>
-        </div>
-            
-    </section>
 
-    <!-- project -->
-    <div class="dash-content pt-5" id="project" data-aos="fade-up" data-aos-duration="1000">
-        <div class="overview">
-            <div class="boxes pt-5 pb-5 m-2">
-                <div class="box box1">
-                    <h2 class="text-center ">My Project</h2>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="project">
-        <div class="container">
-            <div class="row g-4 justify-content-center ">
+            <!-- Bagian Kanan -->
+            <div class="space-y-6">
                 <!-- Card 1 -->
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-3" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="card card-project">
-                        <img src="./img/p1.png" class="card-img-top" alt="Sans-Co Project">
-                        <div class="card-body">
-                            <h5 class="card-title">Sans-Co</h5>
-                        </div>
-                        <!-- Deskripsi hover -->
-                        <div class="card-description">
-                            <p class="card-text">Project study (PKL)</p>
-                            <a href="https://sans-co.glitch.me/" class="btn btn-dark">Sans-Co Project</a>
-                        </div>
+                <div
+                    class="flex items-center space-x-4 bg-[var(--glass-bg2)]  rounded-xl p-4 hover:bg-[var(--secon-hover)]  transition">
+                    <img src="https://via.placeholder.com/80x60" alt="UI/UX" class="w-20 h-14 rounded-lg object-cover">
+                    <div>
+                        <h3 class="text-lg font-semibold">UI/UX Design</h3>
+                        <p class="text-gray-400 text-sm">117 Project</p>
                     </div>
                 </div>
 
-
-                <!-- Card 3 -->
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-3" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="card card-project">
-                        <img src="./img/Logo.png" class="card-img-top" alt="Calon Dosen">
-                        <div class="card-body">
-                            <h5 class="card-title">Calon Dosen</h5>
-                        </div>
-                        <!-- Deskripsi hover -->
-                        <div class="card-description">
-                            <p class="card-text">Tugas besar Pemograman semester 1</p>
-                            <a href="https://ridwanhakimr.github.io/calondosen.github.io/" class="btn btn-dark">Calon
-                                Dosen</a>
-                        </div>
+                <!-- Card 2 -->
+                <div
+                    class="flex items-center space-x-4 bg-[var(--glass-bg2)]  rounded-xl p-4 hover:bg-[var(--secon-hover)]  transition">
+                    <img src="https://via.placeholder.com/80x60" alt="Front End"
+                        class="w-20 h-14 rounded-lg object-cover">
+                    <div>
+                        <h3 class="text-lg font-semibold">Front End Develop</h3>
+                        <p class="text-gray-400 text-sm">84 Project</p>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-3" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="card card-project">
-                        <img src="./img/Screenshot 2025-03-14 061146.png" class="card-img-top" alt="Sans-Co Project">
-                        <div class="card-body">
-                            <h5 class="card-title">Coffe shop UI</h5>
-                        </div>
-                        <!-- Deskripsi hover -->
-                        <div class="card-description">
-                            <p class="card-text">Project Morris </p>
-                            <a href="https://www.figma.com/design/Ujpyi9ovlxOo5h36iRarV9/Kelompok-4-Wanda?node-id=0-1&t=HxB1DnARNNCfeFPZ-1"
-                                class="btn btn-dark">Coffe Shop UI</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 p-3" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="card card-project">
-                        <img src="./img/Screenshot 2025-03-13 071059.png" class="card-img-top"
-                            alt="Nasi Uduk 88 Brebes">
-                        <div class="card-body">
-                            <h5 class="card-title">Sans-co UI</h5>
-                        </div>
-                        <!-- Deskripsi hover -->
-                        <div class="card-description">
-                            <p class="card-text">Sansco UI</p>
-                            <a href="https://www.figma.com/design/zxBd29nKvGW7o3d4sVChXI/kemerdekaan-web?node-id=0-1&t=xqKpoLCJth41hBkO-1"
-                                class="btn btn-dark">Sansco Ui</a>
-                        </div>
-                    </div>
-                </div>
             </div>
+        </div>
+    </section>
+
+    <section class="relative w-full  flex justify-center items-center  text-white py-12">
+        <div class="w-full max-w-7xl px-6">
+            <div
+                class="backdrop-blur-md bg-[var(--glass-bg)] rounded-3xl p-10 shadow-xl grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Education -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-2">Education</h2>
+                    <p class="inline-block px-3 py-1 border rounded-full text-sm mb-2">2024 - Now</p>
+                    <p class="text-gray-200">ULBI - Informatics engineering</p>
+                    <br>
+                    <p class="inline-block px-3 py-1 border rounded-full text-sm mb-2">2021 - 2024</p>
+                    <p class="text-gray-200">Angkasa High School - software engineering</p>
+                </div>
+
+
+                <!-- Technical skill -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-2">Technical skill</h2>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- FRONT-END -->
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                            alt="HTML5" class="w-10 h-10 rounded-md">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                            alt="CSS3" class="w-10 h-10 rounded-md">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" class="w-10 h-10 rounded-md">
+                        <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="TailwindCSS"
+                            class="w-10 h-10 rounded-md">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original-wordmark.svg"
+                            alt="Bootstrap" class="w-10 h-10 rounded-md">
+                        <br>
+                        <!-- BACK-END -->
+                        <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" alt="CodeIgniter"
+                            class="w-10 h-10 rounded-md">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+                            alt="PHP" class="w-10 h-10 rounded-md">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                            alt="Python" class="w-10 h-10 rounded-md">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                            alt="Java" class="w-10 h-10 rounded-md">
+                        <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring"
+                            class="w-10 h-10 rounded-md">
+
+                        <!-- DATABASE -->
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+                            alt="MongoDB" class="w-10 h-10 rounded-md">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                            alt="MySQL" class="w-10 h-10 rounded-md">
+
+                        <!-- DESIGN -->
+                        <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma"
+                            class="w-10 h-10 rounded-md">
+                    </div>
+
+                </div>
+
+                <!-- Soft skill -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-2">Soft skill</h2>
+                    <ul class="space-y-1">
+                        <li>Teamwork</li>
+                        <li>Communication</li>
+                        <li>Critical Thinking</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
+
+                <!-- Skill set -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-2">Skill set</h2>
+                    <div class="grid grid-cols-2 gap-2">
+                        <ul class="space-y-1">
+                            <li>User research</li>
+                            <li>Wireframing</li>
+                            <li>Brainstorming</li>
+                        </ul>
+                        <ul class="space-y-1">
+                            <li>Web Design</li>
+                            <li>App Design</li>
+                            <li>Prototyping</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Interest -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-2">Interest</h2>
+                    <p>Design Trends | Technology</p>
+                </div>
+
+                <!-- Language -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-2">Language</h2>
+                    <p>Indonesia | English (Pre-intermediate)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- project card -->
+    <section class="w-full max-w-7xl px-8 py-12 mx-auto" id="project">
+        <h2 class="font-bold mb-3">- My Portfolio</h2>
+
+        <h2 class="text-3xl font-bold mb-12 text-[var(--primary-color)] ">My Latest Project</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+            <!-- Card Project -->
+            <div
+                class="flex items-center justify-between bg-[var(--glass-bg)] border border-blue-300 rounded-full px-5 py-4 shadow-base w-full max-w-md">
+                <div class="flex items-center space-x-4">
+                    <!-- Ganti placeholder div jadi gambar -->
+                    <img src="img/sansco.png" alt="Logo" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <h3 class="font-semibold text-blue-950 text-lg">Sans Co</h3>
+                        <p class="text-sm text-yellow-50 truncate w-40">Project PKL</p>
+                    </div>
+                </div>
+                <button
+                    class="px-4 py-2 bg-[var(--four-color)] text-sm text-yellow-900 rounded-full hover:bg-[var(--four-hover)]  transition">
+                    See Project
+                </button>
+            </div>
+
+            <!-- Card Project -->
+            <div
+                class="flex items-center justify-between bg-[var(--glass-bg)] border border-blue-300 rounded-full px-5 py-4 shadow-base w-full max-w-md">
+                <div class="flex items-center space-x-4">
+                    <!-- Ganti placeholder div jadi gambar -->
+                    <img src="img/nasiuduk.jpeg" alt="Logo" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <h3 class="font-semibold text-blue-950 text-lg">Nasi Uduk</h3>
+                        <p class="text-sm text-yellow-50 truncate w-40">Project 1 (UMKM)</p>
+                    </div>
+                </div>
+                <button
+                    class="px-4 py-2 bg-[var(--four-color)] text-sm text-yellow-900 rounded-full hover:bg-[var(--four-hover)]  transition">
+                    See Project
+                </button>
+            </div>
+            <!-- Card Project -->
+            <div
+                class="flex items-center justify-between bg-[var(--glass-bg)] border border-blue-300 rounded-full px-5 py-4 shadow-base w-full max-w-md">
+                <div class="flex items-center space-x-4">
+                    <!-- Ganti placeholder div jadi gambar -->
+                    <img src="img/calon.png" alt="Logo" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <h3 class="font-semibold text-blue-950 text-lg">Calon Dosen</h3>
+                        <p class="text-sm text-yellow-50 truncate w-40">Project Pemograman</p>
+                    </div>
+                </div>
+                <button
+                    class="px-4 py-2 bg-[var(--four-color)] text-sm text-yellow-900 rounded-full hover:bg-[var(--four-hover)]  transition">
+                    See Project
+                </button>
+            </div>
+            <!-- Card Project -->
+            <div
+                class="flex items-center justify-between bg-[var(--glass-bg)] border border-blue-300 rounded-full px-5 py-4 shadow-base w-full max-w-md">
+                <div class="flex items-center space-x-4">
+                    <!-- Ganti placeholder div jadi gambar -->
+                    <img src="img/cafequest.png" alt="Logo" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <h3 class="font-semibold text-blue-950 text-lg">Cafe Quest</h3>
+                        <p class="text-sm text-yellow-50 truncate w-40">Project Algoritma</p>
+                    </div>
+                </div>
+                <button
+                    class="px-4 py-2 bg-[var(--four-color)] text-sm text-yellow-900 rounded-full hover:bg-[var(--four-hover)]  transition">
+                    See Project
+                </button>
+            </div>
+            <!-- Card Project -->
+            <div
+                class="flex items-center justify-between bg-[var(--glass-bg)] border border-blue-300 rounded-full px-5 py-4 shadow-base w-full max-w-md">
+                <div class="flex items-center space-x-4">
+                    <!-- Ganti placeholder div jadi gambar -->
+                    <img src="img/Screenshot 2025-03-14 061146.png" alt="Logo" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <h3 class="font-semibold text-blue-950 text-lg">UI/UX Coffe Shop</h3>
+                        <p class="text-sm text-yellow-50 truncate w-40">Project UI/UX</p>
+                    </div>
+                </div>
+                <button
+                    class="px-4 py-2 bg-[var(--four-color)] text-sm text-yellow-900 rounded-full hover:bg-[var(--four-hover)]  transition">
+                    See Project
+                </button>
+            </div>
+        </div>
         </div>
     </section>
 
     <!-- contact -->
-    <section class="contact pt-5 pb-5 mt-5 pt-5" id="contact">
-        <div class="container">
-            <div class="row">
-                <!-- Section 1: Konten Kontak -->
-                <div class="col-12 col-md-6 col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-                    <h3>🤝 Let’s get in touch</h3>
-                    <br>
-                    <h1>Have any project ideas?</h1>
-                    <h1>Ask something?</h1>
-                    <br>
-                    <div class="contact-icon">
+    <section id="contact" class="py-12 mt-10 bg-[var(--four-color)] rounded-tl-3xl rounded-tr-3xl" id="contact">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Section 1: Konten Kontak -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h3 class="text-lg font-semibold text-yellow-900">🤝 Let’s get in touch</h3>
+                <h1 class="text-4xl font-bold mt-4 text-yellow-900">Have any project ideas?</h1>
+                <h1 class="text-4xl font-bold text-yellow-900">Ask something?</h1>
 
-                        <!-- Kolom untuk email -->
-                        <div class="col-12 col-md-4 mb-3">
-                            <div class="d-flex align-items-center">
-                                <i class="fa-regular fa-envelope fs-3 me-2"></i>
-                                <p class="mb-0">zahraramanyshilla@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <!-- Kolom untuk Instagram -->
-                        <div class="col-12 col-md-4 mb-3">
-                            <div class="d-flex align-items-center">
-                                <a href="https://www.instagram.com/zra____________/">
-                                    <i class="fa-brands fa-instagram fs-3 me-2" style="color: black;"></i>
-                                </a>
-                                <p class="mb-0">@zra__</p>
-                            </div>
-                        </div>
-
-                        <!-- Kolom untuk GitHub -->
-                        <div class="col-12 col-md-4 mb-3">
-                            <div class="d-flex align-items-center">
-                                <a href="https://github.com/zahraramanayshilla">
-                                    <i class="fa-brands fa-github fs-3 me-2" style="color: black;"></i>
-                                </a>
-                                <p class="mb-0">zahraramanayshilla</p>
-                            </div>
-                        </div>
-
+                <div class="mt-6 space-y-4">
+                    <!-- Email -->
+                    <div class="flex items-center space-x-3 text-yellow-900">
+                        <a href="https://www.instagram.com/zranysh_/" class=" hover:text-red-800">
+                            <i class='bx bx-envelope text-2xl'></i>
+                        </a>
+                        <p class="">zahraramanyshilla@gmail.com</p>
                     </div>
-                </div>
-
-                <!-- Section 2: Form Pesan -->
-                <div class="col-md-6" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="card">
-                        <div class="card-header fs-4 text-center" style="font-weight: bold;">
-                            Send Message
-                        </div>
-                        <div class="card-body">
-                            <form id="whatsappForm">
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="name" placeholder="Name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Message"
-                                        required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-dark w-100">Send Message</button>
-                            </form>
-                        </div>
+                    <!-- Instagram -->
+                    <div class="flex items-center space-x-3 text-yellow-900">
+                        <a href="https://www.instagram.com/zranysh_/" class=" hover:text-pink-500">
+                            <i class='bx bxl-instagram text-2xl'></i>
+                        </a>
+                        <p class="">zranysh__</p>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="flex items-center space-x-3 text-yellow-900">
+                        <a href="https://github.com/zahraramanayshilla" class=" hover:text-gray-900">
+                            <i class='bx bxl-github text-2xl'></i>
+                        </a>
+                        <p class="">zahraramanayshilla</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Section 2: Form Pesan -->
+            <div data-aos="flip-left" data-aos-duration="1000">
+                <div class="bg-[var(--third-color)] rounded-2xl shadow-lg p-6">
+                    <h2 class="text-xl font-bold text-center mb-4 text-yellow-900">Send Message</h2>
+                    <form id="whatsappForm" class="space-y-4">
+                        <input type="text" id="name" placeholder="Name" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-40 focus:outline-none bg-yellow-50">
+                        <input type="email" id="email" placeholder="Email" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-40 focus:outline-none bg-yellow-50">
+                        <textarea id="message" rows="5" placeholder="Message" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-40 focus:outline-none bg-yellow-50"></textarea>
+                        <button type="submit"
+                            class="w-full bg-[var(--primary-color)] text-white font-semibold py-2 rounded-lg hover:bg-blue-90 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-            
     </section>
+    <footer class="bg-[var(--primary-color)] text-white py-6">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <!-- Bagian Kiri -->
+                <div class="text-center md:text-left">
+                    <p class="text-sm">
+                        &copy; 2024 Zahra Ramanayshilla Sopian. All Rights Reserved.
+                    </p>
+                </div>
 
-    <footer class="text-white pt-4 pb-3 ">
-        <div class="container text-center text-md-start">
-
-            <div class="row text-md-center">
-                <div class="col-md-12">
-                    <p>Copyrights ⓒ 2024 Zahra Ramanayshilla Sopian</p>
+                <!-- Bagian Kanan (Kontak/Link Sosial) -->
+                <div class="flex space-x-6">
+                    <a href="mailto:zahraramanyshilla@gmail.com" class="hover:text-yellow-400 transition">
+                        <i class="fa-regular fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/zra____________/" class="hover:text-yellow-400 transition">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://github.com/zahraramanayshilla" class="hover:text-yellow-400 transition">
+                        <i class="fa-brands fa-github text-xl"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <script src="scripts.js"></script>
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+        const mobileToggle = document.getElementById("mobileToggle");
+        const closeMenu = document.getElementById("closeMenu");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        });
+
+        mobileToggle.addEventListener("click", () => {
+            mobileMenu.classList.remove("hidden");
+            mobileMenu.classList.add("flex");
+        });
+        closeMenu.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.classList.remove("flex");
+        });
+    </script>
+
+</body>
 
 </html>
