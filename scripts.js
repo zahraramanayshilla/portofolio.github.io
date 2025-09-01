@@ -9,12 +9,12 @@
      }
  });
 
- // animasi
- AOS.init({
-     once: true, // Animasi hanya terjadi sekali
-     offset: 120, // Jarak trigger animasi dari bagian atas layar (dalam piksel)
-     delay: 200, // Delay animasi (dalam milidetik)
- });
+AOS.init({
+    once: false,     // biar animasi bisa terjadi setiap elemen masuk viewport
+    mirror: true,    // optional: supaya animasi jalan juga saat keluar viewport (efek balik)
+    offset: 120,
+    delay: 200,
+});
 
 const themeToggle = document.getElementById("themeToggle");
 const mobileToggle = document.getElementById("mobileToggle");
